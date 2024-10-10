@@ -1,0 +1,5 @@
+name = "theme-extension"
+type = "theme"
+
+[security]
+content_security_policy = "frame-ancestors 'self' https://admin.shopify.com https://*.myshopify.com;"

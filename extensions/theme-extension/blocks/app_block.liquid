@@ -1,0 +1,45 @@
+{% if block.type == '@app' %}
+<div class="app-block" id="{{ block.id }}">
+    <h1 style="text-align: center;">{{ block.settings.form_title }}</h1>
+
+    <form type="app-block">
+        <div class="username">
+            <label for="username">Your Name</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div class="email">
+            <label for="email">Your Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="submitBtn">
+            <input type="submit" value="Register Yourself">
+        </div>
+    </form>
+</div>
+  <script src="{{ 'app_block.js' | asset_url }}" defer="defer"></script>
+{% endif %}
+
+
+{% schema %}
+    {
+        "name": "App Registration Form",
+        "target": "section",
+        "class": "app-block-form",
+        "stylesheet": "app-block.css",
+        "javascript": "app-block.js",
+        "settings": [
+            {
+                "type": "text",
+                "id": "form_title",
+                "label": "App Block Form Title",
+                "default": "Registration form"
+            },
+            {
+                "type": "text_alignment",
+                "id": "alignment",
+                "label": "Text alignment",
+                "default": "center"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,20 @@
+.app-block{
+    width: 100%;
+    height: auto;
+    border: 2px solid #000000;
+}
+
+.app-block form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.app-block form input, label{
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+.submitBtn{
+    margin-top: 10px;
+}
